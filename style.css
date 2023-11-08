@@ -128,7 +128,10 @@
     line-height: 1.5;
     display: block;
 }
-
+.header .menu a.active {
+    color: hsl(0, 94%, 65%);
+    background-size: 100% 1px;
+}
 
 
 
@@ -137,7 +140,8 @@
 /* az aláhúzó animácció */
 .header .menu li a {
     padding-bottom: 0;
-    background-image: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    /*     background-image: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%)); */
+    background-image: linear-gradient(hsl(0, 94%, 65%), hsl(0, 94%, 65%));
     background-size: 0 1px;
     background-repeat: no-repeat;
     background-position: 0 100%;
@@ -145,6 +149,7 @@
 }
 
 .header .menu li a:hover {
+    color: hsl(0, 94%, 65%);
     background-size: 100% 1px;
 }
 
@@ -178,6 +183,7 @@
 
 .header-left .icon-btn:hover {
     transform: scale(1.2);
+    color: hsl(0, 94%, 65%);
 }
 
 
@@ -260,7 +266,11 @@
         width: 80%;
         height: 2px;
         background-color: #fff;
+    }
 
+    .header .menu .close-menu-btn:hover::before,
+    .header .menu .close-menu-btn:hover::after {
+        background-color: hsl(0, 94%, 65%);
     }
 
     .header .menu .close-menu-btn::before {
@@ -296,7 +306,9 @@
     .header .menu li a:hover {
         background-size: 0 0px;
     }
-
+    .header .menu li a.active {
+        background-size: 0 0px;
+    }
 
 
 
@@ -321,13 +333,17 @@
         transform: scale(1.2);
     }
 
+    .header-right .open-menu-btn:hover .line {
+        background-color: hsl(0, 94%, 65%);
+    }
+
     .header-right .open-menu-btn .line {
         height: 2px;
         width: 30px;
         background-color: #fff;
         position: absolute;
-
     }
+
 
     .header-right .open-menu-btn .line-1 {
         transform: translateY(-8px);
